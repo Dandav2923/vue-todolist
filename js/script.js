@@ -23,6 +23,10 @@ const app = new Vue (
             {
                 text: 'Chiamare marco',
                 done: false
+            },
+            {
+                text :'',
+                done:false
             }
         ],
             symbols: '\u00D7'
@@ -35,8 +39,15 @@ const app = new Vue (
             removeElement: function (index) {
                 this.list.splice([index],1);
             },
-            newElement : function (text){
-                this.list.push({text});
+            newElement : function() {
+                if (this.list[this.list.length -1].text != ''){
+                    const ListElementObj = {
+                        text: '',
+                        done: false
+                    }
+                    this.list.push(ListElementObj);
+                }
+                console.log(this.list);
             }
         }
     }

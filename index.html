@@ -13,13 +13,13 @@
         <div id="myDIV" class="header">
             <h1>To Do List</h1>
             <div class="d-flex text-center">
-                <input v-model="list.text" type="text" id="myInput" placeholder="Inserisci la tua nuova attività">
-                <span @click="newElement(text)" class="addBtn">Add</span>
+                <input v-model="list[list.length -1].text" type="text" id="myInput" placeholder="Inserisci la tua nuova attività">
+                <span @click="newElement" class="addBtn">Add</span>
             </div>
         </div>
         
-        <ul v-if="list.length > 0 || !(list.text == '') " id="myUL">
-            <li v-for="(element,index) in list" @click="clickCheck(index)" :class="element.done == true ? 'checked': ''">{{element.text}}
+        <ul id="myUL">
+            <li v-show="index != list.length - 1" v-for="(element,index) in list" @click="clickCheck(index)" :class="element.done == true ? 'checked': ''">{{element.text}}
                 <span @click="removeElement(index)" class="close">{{symbols}}</span>
             </li>
             
