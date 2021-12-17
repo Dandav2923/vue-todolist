@@ -34,6 +34,9 @@ const app = new Vue (
 
             removeElement: function (index) {
                 this.list.splice([index],1);
+            },
+            newElement : function (text){
+                this.list.push({text});
             }
         }
     }
