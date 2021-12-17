@@ -23,7 +23,10 @@ const app = new Vue (
                 text: 'Chiamare Franco',
                 boolean: null
             }
-        ]
+        ],
+        methods: {
+            
+        }
         
-    },
+    }
 )
