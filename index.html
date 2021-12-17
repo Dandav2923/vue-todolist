@@ -18,11 +18,13 @@
             </div>
         </div>
         
-        <ul id="myUL">
-            <li></li>
+        <ul v-if="list.length > 0" id="myUL">
+            <li v-for="(element,index) in list" @click="clickCheck(index)" :class="element.done == true ? 'checked': ''">{{element.text}}
+                <span class="close">{{symbols}}</span>
+            </li>
             
         </ul>
-        <script src="js/script.js"></script>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -2,31 +2,35 @@
 const app = new Vue (
     {
         el: '#app',
-        data: [
+        data: {
+            list : [
             {
                 text: 'Chiamare Franco',
-                boolean: null
+                done: false
             },
             {
                 text: 'Chiamare Franco',
-                boolean: null
+                done: false
             },
             {
                 text: 'Chiamare Franco',
-                boolean: null
+                done: false
             },
             {
                 text: 'Chiamare Franco',
-                boolean: null
+                done: false
             },
             {
                 text: 'Chiamare Franco',
-                boolean: null
+                done: false
             }
         ],
+            symbols: '\u00D7'
+        },
         methods: {
-            
+            clickCheck : function(index) {
+                this.list[index].done = true;
+            }
         }
-        
     }
 )
