@@ -20,7 +20,7 @@
         
         <ul v-if="list.length > 0" id="myUL">
             <li v-for="(element,index) in list" @click="clickCheck(index)" :class="element.done == true ? 'checked': ''">{{element.text}}
-                <span class="close">{{symbols}}</span>
+                <span @click="removeElement(index)" class="close">{{symbols}}</span>
             </li>
             
         </ul>

@@ -30,6 +30,10 @@ const app = new Vue (
         methods: {
             clickCheck : function(index) {
                 this.list[index].done = true;
+            },
+
+            removeElement: function (index) {
+                this.list[index].text = '';
             }
         }
     }
