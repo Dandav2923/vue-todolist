@@ -9,19 +9,19 @@ const app = new Vue (
                 done: false
             },
             {
-                text: 'Chiamare Franco',
+                text: 'Chiamare sergio',
                 done: false
             },
             {
-                text: 'Chiamare Franco',
+                text: 'Chiamare mario',
                 done: false
             },
             {
-                text: 'Chiamare Franco',
+                text: 'Chiamare fulvio',
                 done: false
             },
             {
-                text: 'Chiamare Franco',
+                text: 'Chiamare marco',
                 done: false
             }
         ],
@@ -33,7 +33,7 @@ const app = new Vue (
             },
 
             removeElement: function (index) {
-                this.list[index].text = '';
+                this.list.splice([index],1);
             }
         }
     }
